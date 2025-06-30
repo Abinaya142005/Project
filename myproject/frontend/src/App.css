@@ -1,0 +1,385 @@
+/* App.css */
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header */
+.header {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  color: #2d3748;
+  font-size: 2.5rem;
+  margin: 0 0 10px 0;
+  font-weight: 700;
+}
+
+.header p {
+  color: #4a5568;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Error Message */
+.error-message {
+  background: #fed7d7;
+  color: #c53030;
+  padding: 15px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border-left: 4px solid #e53e3e;
+  font-weight: 500;
+}
+
+/* Section Styles */
+.section {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+  color: #2d3748;
+  font-size: 1.5rem;
+  margin: 0 0 20px 0;
+  font-weight: 600;
+}
+
+/* Create Section */
+.create-section {
+  background: linear-gradient(135deg, #e3ffe7 0%, #d9f7be 100%);
+}
+
+.create-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+}
+
+.task-input {
+  flex: 1;
+  min-width: 300px;
+  padding: 12px 16px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: white;
+}
+
+.task-input:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.1);
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #4a5568;
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+/* Button Styles */
+.btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-create {
+  background: #48bb78;
+  color: white;
+}
+
+.btn-create:hover:not(:disabled) {
+  background: #38a169;
+  transform: translateY(-2px);
+}
+
+.btn-refresh {
+  background: #4299e1;
+  color: white;
+}
+
+.btn-refresh:hover:not(:disabled) {
+  background: #3182ce;
+  transform: translateY(-2px);
+}
+
+.btn-save {
+  background: #4299e1;
+  color: white;
+}
+
+.btn-save:hover:not(:disabled) {
+  background: #3182ce;
+}
+
+.btn-cancel {
+  background: #a0aec0;
+  color: white;
+}
+
+.btn-cancel:hover {
+  background: #718096;
+}
+
+.btn-edit {
+  background: #ed8936;
+  color: white;
+}
+
+.btn-edit:hover {
+  background: #dd6b20;
+}
+
+.btn-delete {
+  background: #e53e3e;
+  color: white;
+}
+
+.btn-delete:hover:not(:disabled) {
+  background: #c53030;
+}
+
+.btn-mark-complete {
+  background: #48bb78;
+  color: white;
+}
+
+.btn-mark-complete:hover:not(:disabled) {
+  background: #38a169;
+}
+
+.btn-mark-pending {
+  background: #ed8936;
+  color: white;
+}
+
+.btn-mark-pending:hover:not(:disabled) {
+  background: #dd6b20;
+}
+
+/* Read Section */
+.read-section {
+  background: linear-gradient(135deg, #e6f3ff 0%, #cce7ff 100%);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.section-header h2 {
+  margin: 0;
+}
+
+/* Loading */
+.loading {
+  text-align: center;
+  padding: 40px;
+  color: #4a5568;
+}
+
+.spinner {
+  font-size: 2rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* No Tasks */
+.no-tasks {
+  text-align: center;
+  padding: 40px;
+  color: #718096;
+  font-size: 1.1rem;
+}
+
+/* Tasks List */
+.tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.task-item {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border-left: 4px solid #e2e8f0;
+}
+
+.task-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.task-item.completed {
+  border-left-color: #48bb78;
+  background: #f0fff4;
+}
+
+.task-item.pending {
+  border-left-color: #ed8936;
+  background: #fffbf0;
+}
+
+.task-display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.task-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.task-title.strikethrough {
+  text-decoration: line-through;
+  color: #718096;
+}
+
+.task-status {
+  font-size: 0.85rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  width: fit-content;
+}
+
+.status-completed {
+  background: #c6f6d5;
+  color: #2f855a;
+}
+
+.status-pending {
+  background: #feebc8;
+  color: #c05621;
+}
+
+.task-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Edit Form */
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.edit-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .App {
+    padding: 10px;
+  }
+  
+  .create-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .task-input {
+    min-width: 100%;
+  }
+  
+  .section-header {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+  
+  .task-display {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+  
+  .task-actions {
+    justify-content: center;
+  }
+  
+  .edit-buttons {
+    justify-content: center;
+  }
+  
+  .header h1 {
+    font-size: 2rem;
+  }
+}
