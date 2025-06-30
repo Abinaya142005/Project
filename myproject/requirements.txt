@@ -1,0 +1,13 @@
+# Core framework
+Django==5.2.3                        
+# REST API
+djangorestframework==3.16.0        
+# JWT authentication for DRF
+djangorestframework-simplejwt==5.5.0  
+
+# CORS for React frontend
+django-cors-headers>=3.13.0         
+
+# Database (MongoDB)
+pymongo~=4.13.2                     
+dnspython>=2.5.0
