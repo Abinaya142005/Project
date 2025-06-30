@@ -95,6 +95,7 @@ curl -X POST http://127.0.0.1:8000/api/tasks/ \
 -d '{"title": "Buy milk", "completed": false}'
 ```
 ---
+Demo video link: https://drive.google.com/file/d/1h3qXJ61RzW4qhZol0OQxlO-QN9yGIL--/view?usp=drive_link 
 
 Abinaya.S
 Intern
